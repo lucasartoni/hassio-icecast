@@ -1,0 +1,29 @@
+{
+  "name": "Icecast2",
+  "version": "0.1",
+  "slug": "icecast2",
+  "description": "Icecast2 Server",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "url": "https://github.com/lucasartoni/hassio-icecast",
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "ingress": true,
+  "panel_icon": "mdi:radio",
+  "panel_title": "Icecast2",
+  "options": {
+    "source_password": "aaaa",
+    "admin_password": "bbbb",
+    "password": "cccc",
+    "relay_password": "dddd",
+  },
+  "schema": {
+    "source_password": "str",
+    "admin_password": "str",
+    "password": "str",
+    "relay_password": "str",
+  },
+  "ports": {
+    "8000/tcp": 8000
+  }
+}
