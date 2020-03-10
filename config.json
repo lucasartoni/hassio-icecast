@@ -11,6 +11,8 @@
   "ingress": true,
   "panel_icon": "mdi:radio",
   "panel_title": "Icecast2",
+  "options": {},
+  "schema":{},
   "ports": {
     "8000/tcp": 8000
   }
