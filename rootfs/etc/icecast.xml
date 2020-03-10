@@ -40,6 +40,10 @@
         <header name="Access-Control-Allow-Origin" value="*" />
     </http-headers>
 
+    <paths>
+        <logdir>/share/icecast2/logs</logdir>
+    </paths>
+
 
 <mount>
     <mount-name>/icecast.mp3</mount-name>
