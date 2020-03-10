@@ -15,9 +15,8 @@ COPY rootfs /
 RUN apk add --no-cache \
     icecast
 
-RUN mkdir -p /var/log/icecast \
-   && chown -R ${user}:${group} /usr/share/icecast \
-   && chown -R ${user}:${group} /var/log/icecast
+#RUN chown -R ${user}:${group} /usr/share/icecast \
+#   && chown -R ${user}:${group} /var/log/icecast
 
 USER ${user}
 CMD ["icecast", "-c", "/etc/icecast.xml"]
