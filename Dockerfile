@@ -19,5 +19,5 @@ RUN chown -R ${user}:${group} /usr/share/icecast \
 COPY rootfs /
 
 
-USER ${user}
+# USER ${user}
 CMD ["icecast", "-c", "/etc/icecast.xml"]
