@@ -9,18 +9,15 @@ ARG group=icecast
 
 
 # Copy root filesystem
-#COPY rootfs /
+COPY rootfs /
 
 # Setup icecast
 RUN apk add --no-cache \
     icecast
 
-#COPY silence.ogg /usr/share/icecast/silence.ogg
-#COPY icecast.xml /usr/share/icecast/icecast.xml
-
-#RUN mkdir -p /var/log/icecast \
-#   && chown -R ${user}:${group} /usr/share/icecast \
-#   && chown -R ${user}:${group} /var/log/icecast
+RUN mkdir -p /var/log/icecast \
+   && chown -R ${user}:${group} /usr/share/icecast \
+   && chown -R ${user}:${group} /var/log/icecast
 
 USER ${user}
 CMD ["icecast", "-c", "/etc/icecast.xml"]
