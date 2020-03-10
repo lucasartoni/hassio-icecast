@@ -1,4 +1,10 @@
 <icecast>
+  <logging>
+        <accesslog>/share/icecast/logs/access.log</accesslog>
+        <errorlog>/share/icecast/logs/error.log</errorlog>
+        <loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
+        <logsize>10000</logsize> <!-- Max size of a logfile -->
+    </logging>
   <security>
         <chroot>0</chroot>
         <changeowner>
