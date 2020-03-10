@@ -10,21 +10,13 @@
         <client-timeout>30</client-timeout>
         <header-timeout>15</header-timeout>
         <source-timeout>10</source-timeout>
-       
         <burst-on-connect>0</burst-on-connect>
-        
-        <burst-size>65535</burst-size>
+        <burst-size>16000</burst-size>
     </limits>
 
     <authentication>
-        <!-- Sources log in with username 'source' -->
-        <source-password>username</source-password>
-        <!-- Relays log in username 'relay' -->
-        <relay-password>password</relay-password>
-
-        <!-- Admin logs in with the username given below -->
         <admin-user>admin</admin-user>
-        <admin-password>password</admin-password>
+        <admin-password>adminpw</admin-password>
     </authentication>
 
     <hostname>icecast</hostname>
@@ -47,9 +39,7 @@
 
 
     <paths>
-        <!-- basedir is only used if chroot is enabled -->
         <basedir>/usr/share/icecast</basedir>
-
         <logdir>/var/log/icecast</logdir>
         <webroot>/usr/share/icecast/web</webroot>
         <adminroot>/usr/share/icecast/admin</adminroot>
@@ -60,7 +50,6 @@
     <logging>
         <accesslog>access.log</accesslog>
         <errorlog>error.log</errorlog>
-        <!-- <playlistlog>playlist.log</playlistlog> -->
         <loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
         <logsize>10000</logsize> <!-- Max size of a logfile -->
     </logging>
