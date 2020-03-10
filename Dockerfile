@@ -20,4 +20,4 @@ COPY rootfs /
 
 
 #USER ${user}
-CMD ["icecast", "-c", "/etc/icecast.xml"]
+CMD ["icecast", "-c", "/etc/icecaast.xml"]
