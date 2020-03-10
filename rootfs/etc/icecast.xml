@@ -1,0 +1,7 @@
+<mount>
+    <mount-name>/icecast.mp3</mount-name>
+    <stream-name>Icecast</stream-name>
+
+    <username>stream_user</username>
+    <password>stream_pw</password>
+</mount>
