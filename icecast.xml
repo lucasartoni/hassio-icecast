@@ -1,5 +1,5 @@
 <icecast>
-    <location>Earth</location>
+    <location>Moon</location>
     <admin>icemaster@localhost</admin>
     <limits>
         <clients>100</clients>
