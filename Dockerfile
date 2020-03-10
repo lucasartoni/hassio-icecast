@@ -11,8 +11,8 @@ ARG group=nogroup
 RUN apk add --no-cache \
     icecast
 
-RUN chown -R ${user}:${group} /usr/share/icecast \
-   && chown -R ${user}:${group} /var/log/icecast
+RUN chmod a+w /var/log/icecast/access.log \
+	&& chmod a+w /var/log/icecast/error.log \
 
 
 # Copy root filesystem
