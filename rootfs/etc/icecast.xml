@@ -46,23 +46,22 @@
         <!-- <bind-address>127.0.0.1</bind-address> -->
         <!-- <shoutcast-mount>/stream</shoutcast-mount> -->
     </listen-socket>
-<<<<<<< HEAD
     
     <mount>
         <mount-name>/icecast.mp3</mount-name>
         <stream-name>Icecast</stream-name>
-=======
-    <http-headers>
-        <header name="Access-Control-Allow-Origin" value="*" />
-    </http-headers>
 
->>>>>>> parent of 959a31f... fixes config file
 
         <username>stream_user</username>
         <password>stream_pw</password>
     </mount>
+
+      <http-headers>
+        <header name="Access-Control-Allow-Origin" value="*" />
+    </http-headers>
     
     <fileserve>1</fileserve>
+
 
     <paths>
         <!-- basedir is only used if chroot is enabled -->
