@@ -1,6 +1,6 @@
 {
   "name": "Icecast2",
-  "version": "0.2",
+  "version": "0.3",
   "slug": "icecast2",
   "description": "Icecast2 Server",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
