@@ -18,5 +18,5 @@ RUN apk add --no-cache \
 #RUN chown -R ${user}:${group} /usr/share/icecast \
 #   && chown -R ${user}:${group} /var/log/icecast
 
-#USER ${user}
+USER ${user}
 CMD ["icecast", "-c", "/usr/share/icecast/icecast.xml"]
