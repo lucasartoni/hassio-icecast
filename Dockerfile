@@ -4,16 +4,23 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 #ENV ICECAST_VERSION 2.4.2-r1
 
-# Copy root filesystem
-COPY rootfs /
+ARG user=icecast
+ARG group=icecast
 
-# Setup icecast2
+
+# Copy root filesystem
+#COPY rootfs /
+
+# Setup icecast
 RUN apk add --no-cache \
     icecast
 
-# Copy data for add-on
-COPY run.sh /
-RUN chmod a+x /run.sh
-RUN chmod 777 -R /usr/local/icecast/logs
+COPY silence.ogg /usr/share/icecast/silence.ogg
+COPY icecast.xml /usr/share/icecast/icecast.xml
 
+RUN mkdir -p /var/log/icecast \
+    && chown -R ${user}:${group} /usr/share/icecast \
+    && chown -R ${user}:${group} /var/log/icecast
+
+USER ${user}
 CMD ["icecast", "-c", "/etc/icecast.xml"]
