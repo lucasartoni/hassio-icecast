@@ -16,7 +16,7 @@ RUN apk add --no-cache \
 COPY rootfs /
 
 RUN chmod 777 /var/log/icecast/access.log \
-	&& chmod 777 /var/log/icecast/error.log \
+	&& chmod 777 /var/log/icecast/error.log 
 
 
 
