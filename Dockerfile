@@ -11,12 +11,14 @@ ARG group=nogroup
 RUN apk add --no-cache \
     icecast
 
+
+# Copy root filesystem
+COPY rootfs /
+
 RUN chmod a+w /var/log/icecast/access.log \
 	&& chmod a+w /var/log/icecast/error.log \
 
 
-# Copy root filesystem
-COPY rootfs /
 
 
 # USER ${user}
