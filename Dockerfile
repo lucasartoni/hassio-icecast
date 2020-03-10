@@ -19,4 +19,4 @@ RUN chown -R ${user}:${group} /usr/share/icecast \
    && chown -R ${user}:${group} /var/log/icecast
 
 #USER ${user}
-CMD ["icecast", "-c", "/usr/share/icecast/icecast.xml"]
+CMD ["icecast", "-c", "/etc/icecast.xml"]
